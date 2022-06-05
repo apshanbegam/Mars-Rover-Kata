@@ -9,6 +9,7 @@ namespace Mars.Models
 	public class Rover : IPosition
 	{
 		private PlateauCoordinate Position { get; set; }
+		public static string? FinalPosition;
 
 		public Rover(PlateauCoordinate position)
 		{
@@ -21,7 +22,7 @@ namespace Mars.Models
 			return $"{Position.CoordinateX} {Position.CoordinateY} {Position.Orientation}";
 		}
 
-		public double MarsRover(string commands)
+		public string MarsRover(string commands)
         {
 			int x1 = Position.CoordinateX;
 			int y1 = Position.CoordinateY;
@@ -60,10 +61,14 @@ namespace Mars.Models
 						break;
 				}
             }
-			var distance = Math.Round(Math.Sqrt(Math.Pow(Position.CoordinateX - x1, 2) + Math.Pow(Position.CoordinateY - y1, 2)), 2);
-			return distance;
-
+			//var distance = Math.Round(Math.Sqrt(Math.Pow(Position.CoordinateX - x1, 2) + Math.Pow(Position.CoordinateY - y1, 2)), 2);
+			//return distance;
+			FinalPosition = $"{Position.CoordinateX} {Position.CoordinateY}";
+			return FinalPosition;
+			
 		}
+
+		
 
 
 	}
