@@ -18,5 +18,16 @@
 
   <ItemGroup>
     <None Remove="FluentAssertions" />
+    <None Remove="Models\" />
+    <None Remove="Interfaces\" />
+    <None Remove="Enums\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\.editorconfig" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Models\" />
+    <Folder Include="Interfaces\" />
+    <Folder Include="Enums\" />
   </ItemGroup>
 </Project>
