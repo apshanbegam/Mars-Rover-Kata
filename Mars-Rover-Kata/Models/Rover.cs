@@ -15,8 +15,6 @@ namespace Mars.Models
 		{
 			Position = position;
 		}
-
-
 		public string GetPosition()
 		{
 			return $"{Position.CoordinateX} {Position.CoordinateY} {Position.Orientation}";
@@ -61,8 +59,6 @@ namespace Mars.Models
 						break;
 				}
             }
-			//var distance = Math.Round(Math.Sqrt(Math.Pow(Position.CoordinateX - x1, 2) + Math.Pow(Position.CoordinateY - y1, 2)), 2);
-			//return distance;
 			FinalPosition = $"{Position.CoordinateX} {Position.CoordinateY}";
 			return FinalPosition;
 			
