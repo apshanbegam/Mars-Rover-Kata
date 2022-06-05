@@ -21,13 +21,13 @@ namespace Mars.Models
 			return $"{Position.CoordinateX} {Position.CoordinateY} {Position.Orientation}";
 		}
 
-		public double MarsRover(string instructions)
+		public double MarsRover(string commands)
         {
 			int x1 = Position.CoordinateX;
 			int y1 = Position.CoordinateY;
 			var DirectionCount = Enum.GetNames(typeof(Direction)).Count();
 
-			foreach(var i in instructions)
+			foreach(var i in commands)
             {
 				switch(i)
                 {
